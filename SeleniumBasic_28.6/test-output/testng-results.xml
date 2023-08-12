@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-09T22:32:09 ICT" name="Default suite" finished-at="2023-08-09T22:32:17 ICT" duration-ms="8153">
+    <groups>
+    </groups>
+    <test started-at="2023-08-09T22:32:09 ICT" name="Default test" finished-at="2023-08-09T22:32:17 ICT" duration-ms="8153">
+      <class name="automation.testsuite.D12_multiselect">
+        <test-method is-config="true" signature="openpage()[pri:0, instance:automation.testsuite.D12_multiselect@4c163e3]" started-at="2023-08-09T22:32:09 ICT" name="openpage" finished-at="2023-08-09T22:32:14 ICT" duration-ms="4435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openpage -->
+        <test-method signature="multiCheckbox()[pri:0, instance:automation.testsuite.D12_multiselect@4c163e3]" started-at="2023-08-09T22:32:14 ICT" name="multiCheckbox" finished-at="2023-08-09T22:32:17 ICT" duration-ms="3649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multiCheckbox -->
+      </class> <!-- automation.testsuite.D12_multiselect -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
