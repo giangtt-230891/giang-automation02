@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.D12_multiselect">
+      <class name="automation.pagelocator.Day14_LoginTestFactory">
         <methods>
-          <include name="multiCheckbox"/>
-          <include name="openpage"/>
+          <include name="loginsuccessfully"/>
+          <include name="openApplication"/>
         </methods>
-      </class> <!-- automation.testsuite.D12_multiselect -->
+      </class> <!-- automation.pagelocator.Day14_LoginTestFactory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
