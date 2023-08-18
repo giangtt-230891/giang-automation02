@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Day14_RegisterPageFactory {
+public class Day14_Alada_RegisterPageFactory {
 	private WebDriver driver;
 	
 	@FindBy(xpath="//input[@id='txtFirstname']")
@@ -33,9 +33,16 @@ public class Day14_RegisterPageFactory {
 	@FindBy(xpath="//button[contains(text(),'ĐĂNG KÝ') and contains(@class,'btn_pink_sm fs16')]")
 	private WebElement btnregister;
 	
-	public Day14_RegisterPageFactory(WebDriver _driver) {
+	@FindBy(xpath="//a[@class='btn-anis-effect' and contains(text(),'Đăng Ký')]")
+	private WebElement btnregister_00;
+	
+	public Day14_Alada_RegisterPageFactory(WebDriver _driver) {
 		this.driver = _driver;
 		PageFactory.initElements(driver, this);
+		
+	}
+	public void openpage_Register() {
+		btnregister_00.click();
 		
 	}
 	
