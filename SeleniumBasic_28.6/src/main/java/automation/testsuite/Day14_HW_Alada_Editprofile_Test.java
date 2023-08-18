@@ -16,7 +16,8 @@ import org.openqa.selenium.Alert;
 public class Day14_HW_Alada_Editprofile_Test extends CommonBase {
 	@BeforeTest
 	public void openApplication() {
-		driver =initChromeDriver(D13_Account_Constant.alazaURL);
+		//driver= initChromeDriver(D13_Account_Constant.alazaURL);
+		driver =initChromeDriver("https://alada.vn/thong-tin-ca-nhan");
 
 	}
 	
@@ -30,15 +31,15 @@ public class Day14_HW_Alada_Editprofile_Test extends CommonBase {
 		// login
         Day14_HW_Alada_Login_page login1 = new Day14_HW_Alada_Login_page(driver);
         login1.openpage_Login();
-        login1.LoginFunction("giang22@test.com", "123456");
+        login1.Login_Function("giang22@test.com", "123456");
         
-		/*// open profile
+		// open profile
 		Day14_Alada_DSkhoahoc openprofile  = new Day14_Alada_DSkhoahoc();
 		openprofile.openpage_Editprofile();
 		
 		//edit pass function
 		Day14_HW_Alada_Profilepage_locator profilepage = new Day14_HW_Alada_Profilepage_locator(driver);
-		profilepage.Editpass("riseDemo","Abcd4321", "Abcd4321");
+		profilepage.Editpass_Function("123456","Abcd4321", "Abcd4321");
 		
 		//alert
         Alert alert1 = driver.switchTo().alert();
@@ -48,11 +49,10 @@ public class Day14_HW_Alada_Editprofile_Test extends CommonBase {
         }
         
         //logout
-        openprofile.Alada_logout();
+        openprofile.Logout_Function();
         
         // login again
-        Day14_HW_Alada_Login_page login1 = new Day14_HW_Alada_Login_page(driver);
-        login1.LoginFunction("giang22@test.com", "Abcd4321");
-		*/
+        login1.Login_Function("giang22@test.com", "Abcd4321");
+		
 	}
 }

@@ -28,7 +28,7 @@ public class Day14_HW_Alada_Profilepage_locator {
 	
 	}
 
-	public void Editpass(String pass, String newpass, String renewpass ) {
+	public void Editpass_Function(String pass, String newpass, String renewpass ) {
 		
 		txtpass.clear();
 		txtpass.sendKeys(pass);

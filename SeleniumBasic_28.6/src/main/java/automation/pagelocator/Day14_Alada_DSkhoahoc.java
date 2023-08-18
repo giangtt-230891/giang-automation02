@@ -23,7 +23,7 @@ public class Day14_Alada_DSkhoahoc {
 		editprofile.click();
 		
 	}
-	public void Alada_logout() {
+	public void Logout_Function() {
 		linkprofile.click();
 		linklogout.click();
 	}

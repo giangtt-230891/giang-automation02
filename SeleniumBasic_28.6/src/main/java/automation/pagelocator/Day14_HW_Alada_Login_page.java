@@ -31,7 +31,7 @@ public class Day14_HW_Alada_Login_page {
 		
 	}
 	
-	public void LoginFunction(String email, String pass) {
+	public void Login_Function(String email, String pass) {
 		
 		txtemail.clear();
 		txtemail.sendKeys(email);
