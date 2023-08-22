@@ -34,25 +34,24 @@ public class Day14_HW_Alada_Editprofile_Test extends CommonBase {
         login1.Login_Function("giang22@test.com", "123456");
         
 		// open profile
-		Day14_Alada_DSkhoahoc openprofile  = new Day14_Alada_DSkhoahoc();
+		Day14_Alada_DSkhoahoc openprofile  = new Day14_Alada_DSkhoahoc(driver);
 		openprofile.openpage_Editprofile();
 		
 		//edit pass function
 		Day14_HW_Alada_Profilepage_locator profilepage = new Day14_HW_Alada_Profilepage_locator(driver);
-		profilepage.Editpass_Function("123456","Abcd4321", "Abcd4321");
+		profilepage.Editpass_Function("123456","1234567", "1234567");
 		
-		//alert
-        Alert alert1 = driver.switchTo().alert();
-        String textmsg = alert1.getText();
-        if(textmsg == "Cập nhật mật khẩu mới thành công!") {
-        	alert1.accept();
+		//alert		
+        if(profilepage.alert().getText()== "Cập nhật mật khẩu mới thành công!") {
+        	profilepage.alert().accept();
         }
         
         //logout
         openprofile.Logout_Function();
         
         // login again
-        login1.Login_Function("giang22@test.com", "Abcd4321");
-		
+        login1.openpage_Login();
+        login1.Login_Function("giang22@test.com", "1234567");
+        
 	}
 }

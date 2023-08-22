@@ -1,5 +1,6 @@
 package automation.pagelocator;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,5 +43,8 @@ public class Day14_HW_Alada_Profilepage_locator {
 		btnregister.click();
 		
 	}
-	
+	public Alert alert() {
+    Alert alert = driver.switchTo().alert();
+    return alert;
+	}
 }

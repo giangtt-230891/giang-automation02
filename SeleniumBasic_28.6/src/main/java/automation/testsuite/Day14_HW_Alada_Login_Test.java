@@ -24,7 +24,7 @@ public class Day14_HW_Alada_Login_Test  extends CommonBase {
 		Day14_HW_Alada_Login_page login1 = new Day14_HW_Alada_Login_page(driver);
 		login1.openpage_Login();
 		login1.Login_Function("giang17@test.com","riseDemo");
-		Day14_Alada_DSkhoahoc dskh = new Day14_Alada_DSkhoahoc();
+		Day14_Alada_DSkhoahoc dskh = new Day14_Alada_DSkhoahoc(driver);
 		pause(8000);
 		WebElement expected =driver.findElement(dskh.khoahoccuatoi);
 		assertTrue(expected.isDisplayed());

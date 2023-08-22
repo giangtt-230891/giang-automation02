@@ -21,6 +21,7 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 
+
 /*
  * Author: Tran Hoan, mobile/zalo: +84-979535822
  * Initiate some common methods to testing purpose using relative wait
