@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class D13_LoginPage {
+public class D13_Rise_LoginPage {
 	public By txtemail= By.id("email"); //Xpad là kiểu BY
 	private By txtpassword = By.id("password");
 	private By buttonLogin = By.xpath("//button[text()='Sign in']");
@@ -12,7 +12,7 @@ public class D13_LoginPage {
 	private WebDriver driver;
 	
 	public By authenFailtext = By.xpath("//div[normalize-space()='Authentication failed!' and @role='alert']");
-	public D13_LoginPage(WebDriver _driver) {
+	public D13_Rise_LoginPage(WebDriver _driver) {
 		this.driver =_driver;
 	}
 	public void LoginFunction(String email, String password) {

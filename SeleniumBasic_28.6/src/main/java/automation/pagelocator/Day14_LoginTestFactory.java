@@ -7,19 +7,19 @@ import org.testng.annotations.Test;
 
 import automation.common.CommonBase;
 import automation.constant.D13_Account_Constant;
-import automation.pagelocator.D13_DashboardPage;
-import automation.pagelocator.D13_LoginPage;
+import automation.pagelocator.D13_Rise_DashboardPage;
+import automation.pagelocator.D13_Rise_LoginPage;
 
 public class Day14_LoginTestFactory extends CommonBase{
 	@BeforeTest
 	public void openApplication() {
-		driver =initChromeDriver(D13_Account_Constant.webURL);
+		driver =initChromeDriver(D13_Account_Constant.RiseURL);
 	}
 	@Test
 	public void loginsuccessfully() {
 		Day14_LoginpageFactory factory = new Day14_LoginpageFactory(driver);
 		factory.LoginFunctionFactory("admin@demo.com", "riseDemo");
-		D13_DashboardPage dashboard = new D13_DashboardPage(driver);
+		D13_Rise_DashboardPage dashboard = new D13_Rise_DashboardPage(driver);
 		WebElement expected =driver.findElement(dashboard.dashboardText);
 		assertTrue(expected.isDisplayed());
 	}

@@ -1,6 +1,8 @@
 package automation.testsuite;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 //import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -41,7 +43,8 @@ public class Day14_HW_Alada_Editprofile_Test extends CommonBase {
 		Day14_HW_Alada_Profilepage_locator profilepage = new Day14_HW_Alada_Profilepage_locator(driver);
 		profilepage.Editpass_Function("123456","1234567", "1234567");
 		
-		//alert		
+		//alert	
+		//Wait.until(ExpectedConditions.alertIsPresent()!=null);
         if(profilepage.alert().getText()== "Cập nhật mật khẩu mới thành công!") {
         	profilepage.alert().accept();
         }

@@ -20,7 +20,7 @@ public class Day14_Alada_RegisterTestFactory extends CommonBase {
 		Day14_Alada_RegisterPageFactory register = new Day14_Alada_RegisterPageFactory(driver);
 		register.openpage_Register();
 		register.RegisterFunctionFactory("NAME","giang17@test.com","giang17@test.com", "riseDemo","riseDemo","0987671733");
-		Day14_Alada_DSkhoahoc dskh = new Day14_Alada_DSkhoahoc();
+		Day14_Alada_DSkhoahoc dskh = new Day14_Alada_DSkhoahoc(driver);
 		pause(8000);
 		WebElement expected =driver.findElement(dskh.khoahoccuatoi);
 		assertTrue(expected.isDisplayed());
