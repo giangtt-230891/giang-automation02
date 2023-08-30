@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.D16_Alert_SendKey">
+      <class name="D17_HW_Codestar_chat">
         <methods>
-          <include name="Test_alert_sendkey"/>
-          <include name="openPage"/>
+          <include name="register_fail"/>
+          <include name="closebrowser"/>
+          <include name="openbrowser"/>
         </methods>
-      </class> <!-- automation.testsuite.D16_Alert_SendKey -->
+      </class> <!-- D17_HW_Codestar_chat -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
