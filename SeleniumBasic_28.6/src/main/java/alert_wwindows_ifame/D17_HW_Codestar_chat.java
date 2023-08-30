@@ -1,3 +1,4 @@
+package alert_wwindows_ifame;
 import static org.testng.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
@@ -10,7 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import alert_wwindows_ifame.IFrame_ExplicitWait;
 import automation.common.CommonBase;
 public class D17_HW_Codestar_chat  extends CommonBase {
 	@BeforeMethod
