@@ -31,7 +31,8 @@ import org.openqa.selenium.firefox.FirefoxProfile;
  */
 public class CommonBase {
 	public static WebDriver driver;	
-	public int initWaitTime = 10;
+	public int initWaitTime = 30;
+
 	public WebDriver initChromeDriver(String URL)
 	{
 		ChromeOptions options = new ChromeOptions();
@@ -42,21 +43,6 @@ public class CommonBase {
 		driver.get(URL);
 		return driver;
 	}
-	
-	  public static WebDriver setupDriver(String browserName) {
-	        switch (browserName.trim().toLowerCase()) {
-	            case "chrome":
-	                driver = initChromeDriver();
-	                break;
-	            case "firefox":
-	                driver = initFirefoxDriver();
-	                break;
-	            default:
-	                System.out.println("Browser: " + browserName + " is invalid, Launching Chrome as browser of choice...");
-	                driver = initChromeDriver();
-	        }
-	        return driver;
-	    }
 
 	public void inputTextJavaScriptInnerHTML(By inputElement, String companyName) {
 		WebElement element = driver.findElement(inputElement);
@@ -184,7 +170,43 @@ public class CommonBase {
 		driver.manage().window().maximize();
 		return driver;
     }
-
+    private static WebDriver initFirefoxDriver() {
+        System.out.println("Launching Firefox browser...");
+		System.setProperty("webdriver.firefox.driver",
+        System.getProperty("user.dir") + "\\driver\\geckodriver.exe");	
+        driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        return driver;
+    }  
+    private static WebDriver initEdgeDriver() {
+        System.out.println("Launching Edge browser...");
+    	System.setProperty("webdriver.edge.driver",
+    	System.getProperty("user.dir") + "\\driver\\msedgedriver.exe");	
+        driver = new EdgeDriver();
+        driver.manage().window().maximize();
+        return driver;
+    }
+    public static WebDriver setupDriver(String browsername) {
+    	switch(browsername.trim().toLowerCase()) {
+    	case"chorme":
+    		driver=initChromeDriver();
+    		break;
+    	case"firefox":
+    		driver=initFirefoxDriver();
+    		break;
+    	case"Edge":
+    		driver=initEdgeDriver();
+    		break;
+    	default:
+    		System.out.println();
+    		System.out.println("Browser: " + browsername + " is invalid, Launching Chrome as browser of choice...");
+            driver = initChromeDriver();
+    }
+    return driver;
+    	}
+   // }
+   /* 
+      
     public static WebDriver initFirefoxDriver() {
         System.out.println("Launching Firefox browser...");
 //        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
@@ -195,7 +217,7 @@ public class CommonBase {
         driver.manage().window().maximize();
         return driver;
     }
-    
+  */
     public WebDriver initFirefoxDriverTest(String URL) {
         System.out.println("Launching Firefox browser...");
 //        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
@@ -208,4 +230,5 @@ public class CommonBase {
         driver.manage().window().maximize();
         return driver;
     }
+    
 }
